@@ -234,12 +234,12 @@ display: flex;
 }
 .contact p{
 
-	font-size: 1.4em;
+	font-size: 1.1em;
 	color: #4D4D4D;
 }
 .contact img{
 	width:20%;
-	margin-top:4%;
+	margin-top:12%;
 }
 ul {
 	list-style: none;
@@ -292,6 +292,7 @@ ul {
 	color:floralwhite ;
 	outline: none;
 	display: inline-block;
+	cursor: pointer;
 }
 .black{
 	color:black ;
@@ -551,10 +552,10 @@ align-self: center;
 	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") #7c7c7c center 50%/50% 50% no-repeat;
 }
 .contact .banner-top{
-	padding-top: 8%;
+	padding-top: 4%;
 }
 .banner-top {
-	padding-top: 1.730928444707274%;
+	padding-top: 0.8%;
 }
 .banner-title {
 	padding: 5px 0;
@@ -606,13 +607,14 @@ font-weight: normal;
 	line-height: 100%;
 	padding: 15px 0px;
 	position: relative;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	cursor: pointer;
 }
 .banner-button img{
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
-	width: 3em;
+	width: 4em;
 	margin-left: -1em;
+
 }

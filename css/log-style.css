@@ -31,10 +31,17 @@ header{
 
 }
 .left{
-padding-left: 1em;
+padding-left: 1.5em;
     width:10%;
-
+    display: flex;
+    height: 100%;
 }
+.left img{
+    width: 36px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
 .middle{
     width: 100%;
 }
@@ -47,8 +54,9 @@ padding-left: 1em;
 }
 .right{
     width:10%;
-    padding-right: 1em;
+    padding-right: 1.5em;
     display: flex;
+    height: 100%;
 }
 .right a{
     white-space:nowrap;
@@ -69,6 +77,7 @@ padding-left: 1em;
     margin: auto 0;
     cursor: pointer;
 }
+
 main{
     background-color: #EEE9E0;
     height: 100%;
@@ -93,6 +102,7 @@ main img{
     height: 5em;
     margin-top: 3em;
     margin-left: -1.3em;
+    cursor: pointer;
 }
 #create{
     margin-top:2em;
