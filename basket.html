@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Product Details</title>
+    <link type="text/css" rel="stylesheet" href="css/nav.css">
+
+<style>
+body,html{ position: absolute; bottom:0; left:0; top:0; width: 100%; height:100%; background-color: #ffffff; font-family: 'Quicksand', sans-serif;}
+*{padding:0; margin:0;}
+
+li{list-style:none;}
+img{border:none;}
+.bleft{width:50%; height:100%;   position: fixed; background-color: #EEE9E0;}
+.slide{position:relative; margin:20% auto; width:60vh; overflow:hidden;}
+.slide .big{ position:relative; overflow:hidden; left:0;top:0;}
+.slide a{position:absolute; top:25vh; opacity:0;z-index:10;}
+.slide .big li{float:left; width:60vh; }
+.slide .big  li img{width:100%;display:block;}
+.slide .prev{left:-10px;}
+.slide .next{right:-10px;}
+.slide .small{ margin-top:5px; width:100px; position:relative;}
+.slide .small li{ float:left;margin-right:5px; width:90px; background:#000;}
+.slide .small li:last-child{ margin-right:0;}
+.slide .small li img{width:100%;display:block; opacity:0.5;}
+.bright{
+    width:50%;  display: block; position: relative; background-color: #E9D8D0;
+    margin-left: 50%;
+}
+
+a{
+    cursor: pointer;
+
+    text-decoration: none;
+    color: #000;
+
+}
+h1{
+        padding-top: 20%;
+        padding-bottom: 6%;
+        font-size:90px;
+        text-align: center;
+        font-weight: 200;
+    }
+h2{
+    padding:2% 12% 1%;
+    font-size: 1.8em;
+    font-weight: 200;
+}
+p{
+     padding:2% 12%;
+    text-align: left;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: 100;
+    word-wrap:break-word;
+    word-break:normal;
+}
+span{
+    padding:2% 12%;
+    font-size: 1.6em;
+    font-weight: 100;
+}
+span img{
+    width:40%;
+}
+#add{
+    padding-left: 58%;
+    padding-right: 12%;
+    width:30%;
+    margin-top: -7%;
+}
+#price{ font-size: 1.2em; padding:10% 12% 0% 12%;}
+.banner-top-one {
+    margin-top: 7%;
+    margin-bottom:7%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    background-color: #D6D6C0;
+    height: 12px;
+}
+.banner-button {
+    width: 96%;
+    vertical-align: middle;
+    text-align: right;
+
+    margin-top: 15%;
+	padding-bottom: 5%;
+
+
+}
+.banner-button a {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    height: auto;
+    width: auto;
+    line-height: 100%;
+    padding: 15px 0px;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: 100;
+}
+.banner-button img{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 3em;
+    margin-left: -1em;
+
+}
+
+</style>
+<script src="js/single_lb.js"></script>
+<script src="js/move1.js"></script>
+<script src="js/menucon.js"></script>
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="c-main-nav" id="nav1">
+
+            <ul class="c-main-nav__list" >
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link " href="index.html">Home</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link" href="boxes.html">All Product</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link" href="#coins">My Garden</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="middle"><a href="index.html"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
+        <div class="right"><a href="log.html">Log in</a> <img onmouseover="document.getElementById('basket').style.display='block'" onmouseleave="document.getElementById('basket').style.display='none'" src="images/购物车图标.png" alt=""> </div>
+        <div id="basket" >
+            <div class="box">
+                <img src="images2/xiuqiuhua.png" alt=""></div>
+            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>
+
+            <button>See Shopping Basket</button>
+        </div>
+    </div>
+</header>
+<div class="bleft" >
+
+<div class="slide" id="single_lb">
+
+	<a href="javascript:;" class="prev"><img src="images2/prev.png"></a>
+    <a href="javascript:;" class="next"><img src="images2/next.png"></a>
+    <ul class="big">
+        <li><img src="images2/xiuqiuhua.png"></li>
+        <li><img src="images2/xiuqiuhua2.png"></li>
+        <li><img src="images2/xiuqiuhua3.png"></li>
+
+
+    </ul>
+
+    <ol class="small">
+        <li><img style="opacity:1" src="images2/xiuqiuhua.png"></li>
+        <li><img src="images2/xiuqiuhua2.png"></li>
+        <li><img src="images2/xiuqiuhua3.png"></li>
+
+
+    </ol>
+
+</div>
+</div>
+
+<div class="bright" id="top">
+<h1>Hydrangea</h1>
+    <p>It is a genus of 70–75 species of flowering plants native to Asia and the Americas. By far the greatest species diversity is in eastern Asia, notably Korea, China, and Japan. Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30m by climbing up trees. They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.
+    </p>
+    <p id="price">- Price: 5 GBP</p> <a><img id="add" src="images/button1.png" alt=""></a>
+    <div class="banner-top-one"> </div>
+    <h2>Meanings of flowers</h2>
+    <p>The hydrangea has a wide range of meanings, from heartfelt emotion to gratitude to boastfulness. Each meaning stems from different cultural beliefs and stories.</p>
+
+    <p> Because of the Japanese legend above, hydrangeas are associated with apology.</p>
+
+    <p> Victorians considered hydrangeas a negative plant, and used it to represent boastfulness, bragging, or vanity.</p>
+
+    <p> Hydrangeas became associated with these boastfulness and vanity because they produce magnificent flowers, but very few seeds. They were also given to people who turned down love interests as signs that they were cold or frigid.</p>
+    <div class="banner-top-one"> </div>
+    <h2>How to plant it</h2>
+    <p>Most hydrangeas thrive in rich, porous, somewhat moist soils. Add compost to enrich poor soil.</p>
+
+    <p> They prefer full sun in the morning, with some afternoon shade; however, many will grow and bloom in partial shade. This is especially true for the Bigleaf hydrangeas.</p>
+
+    <p> Plant in spring or fall.</p>
+
+    <p> Dig a hole as deep as the root ball and 2 to 3 times as wide.</p>
+
+    <p> Set the plant in the hole and fill it half full with soil. Water. After water is drained, fill the rest of the hole with soil.</p>
+
+    <p>Water thoroughly.</p>
+<span><img src="images/温度条.png" alt=""> 18 - 28℃</span>
+
+    <div class="banner-button"><img src="images/button6.png" alt=""> <a href="#top">Back to top</a></div>
+
+</div>
+</body>
+</html>

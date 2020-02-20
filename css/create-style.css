@@ -14,72 +14,7 @@ a:hover {
 
 
 }
-header{
-    height: 5em;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
 
-}
-.container{
-    width:100%;
-    display: flex;
-    height: 5rem;
-    background-color: #1B3240;
-}
-.left, .middle, .right {
-    display: inline-block;
-    margin: auto 0;
-    float: left;
-
-}
-.left{
-padding-left: 1.5em;
-    width:10%;
-    display: flex;
-    height: 100%;
-}
-.left img{
-    width: 36px;
-    margin: auto 0;
-    cursor: pointer;
-}
-
-.middle{
-    width: 100%;
-}
-.center{
-    height: 4.5rem;
-    width: 200px;
-    margin: 0.25em auto;
-    display: block;
-    cursor: pointer;
-}
-.right{
-    width:10%;
-    padding-right: 1.5em;
-    display: flex;
-    height: 100%;
-}
-.right a{
-    white-space:nowrap;
-    color: white;
-    font-size: 20px;
-    padding-right:1em;
-    margin: auto 0;
-    width:100%;
-    text-align: center;
-}
-.right a:hover {
-    color: gray;
-    cursor: pointer;
-}
-.right img {
-    float: right;
-    width: 36px;
-    margin: auto 0;
-    cursor: pointer;
-}
 
 main{
     background-color: #EEE9E0;
@@ -90,10 +25,10 @@ main{
 .old, .new{
     width:50%;
     display: block;
-    height: 50%;
+    
     position: relative;
     float: left;
-
+    margin-top:3em; 
 }
 
 .content{
@@ -106,7 +41,7 @@ main{
 main img{
     display: block;
     height: 5em;
-    padding-top: 1em;
+    padding-top: 2em;
     margin: 0em auto;
     cursor: pointer;
 
@@ -136,13 +71,13 @@ h4{
 input{
     background-color: #B8BFA8;
     width:100%;
-    height:2em;
+    
     color: white;
-    padding: 0 1%;
+	margin:1em 0; 
+    padding:1% 1%;
     font-size: 12px;
-
-
 }
+
 input::-ms-input-placeholder{
      color: white;
  }
@@ -156,4 +91,23 @@ p{
     padding-top:2em;
 
     color: #6D6875;
+}
+label{
+	
+    color: #6D6875;
+}
+.gender{
+	margin-right: 34%;
+	
+}
+select {
+  width: 103%;
+  margin:1em 0; 
+  padding:1% 1%;
+  display: inline-block;
+  height:2.2em;
+  color: #fff;
+  font-size: 12px;
+  background-color: #B8BFA8;
+	
 }

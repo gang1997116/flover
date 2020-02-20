@@ -1,0 +1,184 @@
+header{
+    height: 5em;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+}
+.container{
+    width:100%;
+    display: flex;
+    height: 5rem;
+    background-color: #1B3240;
+}
+
+ul {
+    list-style: none;
+    margin:0;
+    padding: 0%;
+
+}
+
+
+.c-main-nav {
+
+    margin: 0% auto;
+
+    position: absolute;
+    height: 5rem;
+    width: 100%;
+    display: none;
+
+    align-items: center;
+    margin-left: 4%;
+    padding-right: 8%;
+
+
+
+
+}
+
+.c-main-nav__list {
+    display: flex;
+
+    width: 50%;
+
+}
+
+.c-main-nav__item {
+    margin: 0 0;
+    padding: 0;
+    width:18%;
+    text-align: center;
+    white-space:nowrap;
+
+
+}
+
+.c-main-nav__item:last-child {
+    margin-right: 0;
+}
+.c-main-nav__link {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    color: white;
+    outline: none;
+    display: block;
+    cursor: pointer;
+}
+
+.c-main-nav__link:hover {
+    color: #FFBD9F;
+}
+
+
+.left,  .right {
+    display: inline-block;
+    margin: auto 0;
+    float: left;
+    width: 10%;
+
+
+}
+.left{
+    padding-left: 2.2em;
+
+    display: flex;
+    height: 100%;
+}
+.left img{
+    width: 22px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.middle{
+    display: inline-block;
+    align-items: center;
+    margin: 0  auto;
+    width: 20%;
+    /*position: absolute;*/
+
+}
+.center{
+    height: 4.3rem;
+    width: 11em;
+    margin: 0.25em auto;
+    display: block;
+    cursor: pointer;
+}
+.right{
+
+    padding-right: 2.2em;
+    display: flex;
+    height: 100%;
+}
+.right a{
+    white-space:nowrap;
+    color: white;
+    font-size: 16px;
+    padding-right:1em;
+    margin: auto 0;
+    width:100%;
+    text-align: center;
+}
+.right a:hover {
+    color: gray;
+    cursor: pointer;
+}
+.right img {
+    float: right;
+    width: 22px;
+    margin: auto 0;
+    cursor: pointer;
+}
+#basket{
+    display: none;
+    position: absolute;
+    width:15%;
+    height: 350px;
+    margin-left:82.7%;
+    margin-top:5.8em;
+    left:0;
+    background-color: #EEE9E0;
+}
+.box{
+    width:25%;
+    height:0;
+    padding-bottom:25%;
+    position:relative;
+    display: inline-block;
+    float: left;
+}
+.box img{
+    width:100%;
+    height:100%;
+    position:absolute;
+    margin-top: 1.6em;
+    margin-left: 1.6em;
+
+
+}
+.productinfo{
+    width:60%;
+    display: inline-block;
+    float: left;
+padding-top: 1.7em;
+}
+.productinfo p{
+    font-family: 'Quicksand', sans-serif;
+padding-left: 2.7em;
+    padding-top: 0em;
+    font-size: 0.9em;
+
+}
+#basket button{
+    position: absolute;
+    background-color: #D8D8C2;
+    border: none;
+    height:2.5em;
+    width:80%;
+    bottom: 1.2em;
+left: 10%;
+    font-size: 1em;
+}

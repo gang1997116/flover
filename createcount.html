@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Log in</title>
     <link type="text/css" rel="stylesheet" href="css/create-style.css">
+    <link type="text/css" rel="stylesheet" href="css/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,30 +18,40 @@
 </header>
 <main>
     <h1>Write Your Personal Details</h1>
+	
 <div class="old">
     <div class="content">
-
-    <p>E-mail</p>
+	<label for="email">E-mail</label><br>
     <input type="text" placeholder="123456@qwe">
-    <p>Password</p>
-    <input type="password" placeholder="password">
-        <p>First Name</p>
-        <input type="text" placeholder="Abc">
-
+    <label for="password">password</label><br>
+    <input type="password" placeholder=">>>>>>>>">
+    <label for="firstname">First Name</label><br>
+		<input type="text" placeholder="Abc">
+		
+    <label for="gender">Gender</label><br>
+		
+	<select id="gender" name="gender">
+      <option value="male" >Male</option>
+      <option value="female">Female</option>
+      
+    </select>
     </div>
 </div>
 <div class="new">
     <div class="content">
-        <p class="empty">E-mail</p>
-        <input type="text" class="empty">
-        <p>Repeat Password</p>
-        <input type="password" placeholder="password">
-        <p>Last Name</p>
+		<label for="telephone">Telephone</label><br>
+        <input type="text" placeholder="1234567890">
+		<label for="password2">Repeat Password</label><br>
+		<input type="password" placeholder=">>>>>>>>">
+        <label for="lastname">Last Name</label><br>
         <input type="text" placeholder="Def">
+		<label for="birth">Date of Birth</label><br>
+        <input type="date" placeholder="Def">
 
 </div>
 </div>
-    <img src="images/button8.png" alt="">
+  <img src="images/button8.png" alt="">
+		
 </main>
 </body>
 </html>
