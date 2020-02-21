@@ -5,13 +5,38 @@
     <title>basket</title>
     <link type="text/css" rel="stylesheet" href="css/account_style.css">
     <link type="text/css" rel="stylesheet" href="css/nav.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="js/menucon.js"></script>
     <style>
-        body,html{
-
+  body,html{
             background-color: #E7D6CE;
             height: fit-content;
+
         }
+  .product{
+      height: 10vw;
+
+  }
+  .product img{
+      position: relative;
+      width: calc(10vw + 4px);
+      height: calc(10vw + 4px);
+      display: block;
+      float: left;
+      padding-left: 3em;
+  }
+  .productdetail{
+      float: left;
+      margin-left: 2em;
+      height: 100%;
+      width: calc(100% - 19vw);
+      border: 2px solid #B6BDA6;
+      align-items: center;
+  }
+  .leftword p,.rightword p{
+      line-height: calc(10vw/3);
+      font-size: 1.4vw;
+  }
 .addressform{
     display: block;
     margin: 1rem 3rem;
@@ -36,7 +61,7 @@
 
         }
         .toptitle{
-            padding: 6.3em 0;
+            padding: 6.7em 0 0;
             height: 25vh;
             line-height: 25vh;
 
@@ -57,11 +82,11 @@
             display: inline-block;
             height: 5vh;
             line-height: 5vh;
-            font-size:60px;
+            font-size:58px;
             text-align: center;
             font-weight: 200;
             width:100%;
-
+            font-family: 'Montserrat';
         }
         #forcontinue{
             display: none;
@@ -144,9 +169,9 @@
 <div class="toptitle" id="top">
     <img src="images/圆圈装饰.png" alt="">
 <div class="chuizhijuzhong">
-Thank you for choosing Flovers</div></div>
+Thank you for choosing Flover</div></div>
 <div class="inner" >
-    <h3>Order History</h3>
+    <h3>You choosed:</h3>
     <div class="product">
         <img src="images2/xiuqiuhua.png" alt="">
         <div class="productdetail">
@@ -214,7 +239,7 @@ Thank you for choosing Flovers</div></div>
         <div class="addressform" id="payform">
 
 
-        <form id="myForm" action="">
+        <form id="myForm2" action="">
 
 
             <div class="half">

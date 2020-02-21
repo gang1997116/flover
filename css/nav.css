@@ -3,7 +3,7 @@ header{
     width: 100%;
     position: fixed;
     z-index: 1;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat' ;
 
 }
 a{
@@ -62,7 +62,7 @@ ul {
     margin-right: 0;
 }
 .c-main-nav__link {
-    font-family: 'Quicksand', sans-serif;
+
     font-size: 1em;
     color: white;
     outline: none;
@@ -178,6 +178,7 @@ padding-top: 1.7em;
 padding-left: 2.7em;
     padding-top: 0em;
     font-size: 0.9em;
+    white-space:nowrap;        /* 不换行 */
 
 }
 #basket button{
@@ -189,4 +190,5 @@ padding-left: 2.7em;
     bottom: 1.2em;
 left: 10%;
     font-size: 1em;
+    white-space:nowrap;        /* 不换行 */
 }

@@ -3,7 +3,7 @@ html, body {
 
 	margin: 0;
 	height: 100%;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Montserrat' ;
 }
 
 #wrap{
@@ -87,7 +87,7 @@ html, body {
 	margin-top: -2%;
 }
 .about{
-
+    font-weight: 100;
 	margin-left: 37%;
 	margin-right: 10%;
 	width: 53%;
@@ -96,9 +96,8 @@ html, body {
 	position:relative;
 	top:50%;
 	transform: translateY(-80%);
-
-
-
+	color: #6D6875;
+	overflow: hidden;
 
 }
 .left{
@@ -114,10 +113,9 @@ html, body {
 .aboutword {
 	position:absolute;
 	bottom: 7%;
-	margin: 0;
 	padding-left: 10%;
 	padding-right: 10%;
-
+	font-family: 'Quicksand', sans-serif;
 }
 .first p{
 padding-top:1em;
@@ -236,7 +234,7 @@ display: flex;
 	margin-top:0em;
 	margin-bottom: 1em;
 	color: #4D4D4D;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Montserrat' ;
 }
 .contact p{
 
@@ -293,7 +291,7 @@ ul {
 }
 .c-main-nav__link {
 	font-size: 1.2em;
-	font-weight: 800;
+	font-weight: 300;
 	letter-spacing: 0.1875rem;
 	color:floralwhite ;
 	outline: none;

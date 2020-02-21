@@ -211,7 +211,7 @@ main {
 	margin: 0 auto;
 	overflow: hidden;
 	/* we always want 7 boxes in a row */
-	padding: 5rem calc((100vw - (3 * (10vw + 1vw)))/2) ;
+	padding: 5rem calc((100vw - (3 * (12vw + 2vw)))/2) ;
 }
 
 .js .calendar {
@@ -219,8 +219,8 @@ main {
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
 	padding-top: 5rem;
-	padding-right: calc((100vw - (3 * (10vw + 1vw))) / 2);
-	padding-left: calc((100vw - (3 * (10vw + 1vw))) / 2);
+	padding-right: calc((100vw - (3 * (12vw + 2vw))) / 2);
+	padding-left: calc((100vw - (3 * (12vw + 2vw))) / 2);
 	padding-bottom: 3em;
 }
 
@@ -270,8 +270,8 @@ main {
 	-webkit-flex: none;
 	-ms-flex: none;
 	flex: none;
-	width: 10vw;
-	height: 10vw;
+	width: 12vw;
+	height: 12vw;
 	margin: 0.5vw;
 }
 
@@ -306,33 +306,33 @@ main {
 
 .cube__side--front {
 	position: relative;
-	-webkit-transform: translateZ(5vw);
-	transform: translateZ(5vw);
+	-webkit-transform: translateZ(6vw);
+	transform: translateZ(6vw);
 }
 
 .cube__side--back {
-	-webkit-transform: rotateY(180deg) translateZ(5vw);
-	transform: rotateY(180deg) translateZ(5vw);
+	-webkit-transform: rotateY(180deg) translateZ(6vw);
+	transform: rotateY(180deg) translateZ(6vw);
 }
 
 .cube__side--right {
-	-webkit-transform: rotateY(90deg) translateZ(5vw);
-	transform: rotateY(90deg) translateZ(5vw);
+	-webkit-transform: rotateY(90deg) translateZ(6vw);
+	transform: rotateY(90deg) translateZ(6vw);
 }
 
 .cube__side--left {
-	-webkit-transform: rotateY(-90deg) translateZ(5vw);
-	transform: rotateY(-90deg) translateZ(5vw);
+	-webkit-transform: rotateY(-90deg) translateZ(6vw);
+	transform: rotateY(-90deg) translateZ(6vw);
 }
 
 .cube__side--top {
-	-webkit-transform: rotateX(90deg) translateZ(5vw);
-	transform: rotateX(90deg) translateZ(5vw);
+	-webkit-transform: rotateX(90deg) translateZ(6vw);
+	transform: rotateX(90deg) translateZ(6vw);
 }
 
 .cube__side--bottom {
-	-webkit-transform: rotateX(-90deg) translateZ(5vw);
-	transform: rotateX(-90deg) translateZ(5vw);
+	-webkit-transform: rotateX(-90deg) translateZ(6vw);
+	transform: rotateX(-90deg) translateZ(6vw);
 }
 
 
