@@ -212,7 +212,13 @@ padding-top:1em;
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
-
+}
+.content{
+	position: absolute;
+	bottom: 9em;
+	margin: 0 30%;
+	display: block;
+	width: 40%;
 }
 page{
 	width: 100%;
@@ -227,9 +233,9 @@ display: flex;
 
 }
 .contact h1{
-	margin-top:2em;
+	margin-top:0em;
 	margin-bottom: 1em;
-	color: black;
+	color: #4D4D4D;
 	font-family: 'Quicksand', sans-serif;
 }
 .contact p{
@@ -238,8 +244,8 @@ display: flex;
 	color: #4D4D4D;
 }
 .contact img{
-	width:20%;
-	margin-top:12%;
+	width:60%;
+padding-right: 5%;
 }
 ul {
 	list-style: none;

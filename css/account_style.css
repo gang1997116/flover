@@ -1,0 +1,156 @@
+body,html{ position: absolute;
+    bottom:0; left:0; top:0; width: 100%; height:100%;
+    background-color: #EEE9E0;
+    font-family: 'Quicksand', sans-serif;}
+
+*{padding:0; margin:0;}
+
+.bleft{width:28%; height:100%;
+    position: fixed;
+    background-color: #E9D8D0;}
+
+.bright{
+    width:72%;  position: relative; background-color: #EEE9E0; padding-top: 8rem;
+    margin-left: 28%;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+h2{
+    padding:2% 12% 1%;
+    font-size: 2em;
+    font-weight: 200;
+}
+.lcenter  h3{
+    padding:2% 12% 4%;
+    text-align: center;
+}
+h3{
+    padding:2% 3rem 1%;
+    font-size: 1.6em;
+    font-weight: 100;
+    text-align: left;
+    letter-spacing:0.055em;
+}
+p{
+    padding:1% 3em;
+    text-align: left;
+    line-height: 25px;
+    font-size: 1em;
+    font-weight: 100;
+
+}
+.lcenter p{
+    text-align: center;
+    padding:3% 12%;
+}
+.lcenter img{
+    position: relative;
+    width: 60%;
+    margin: 3em auto;
+    display: block;
+}
+.content{
+    margin-top: 8rem;
+
+}
+.lcenter{
+    margin: 0 auto;
+    width: 60%;
+    position: relative;
+    display: block;
+    color: #6D6875;
+}
+.product{
+    padding:0.5em 0;
+    width: 100%;
+    display: block;
+    height: 8vw;
+
+}
+.product img{
+    position: relative;
+    width: 8vw;
+    height: 8vw;
+    display: block;
+    float: left;
+    padding-left: 3em;
+}
+.productdetail{
+    float: left;
+    margin-left: 2em;
+    height: 8vw;
+    width: calc(100% - 17vw);
+    border: 2px solid #B6BDA6;
+    align-items: center;
+}
+.leftword{
+    width: 50%;
+    float: left;
+
+    display: inline-block;
+}
+.leftword p{
+    font-size: 1.2vw;
+    padding:0 5%;
+    line-height: calc(8vw/3);
+    text-align: left;
+}
+.rightword{
+    width: 50%;
+    float: right;
+    display: inline-block;
+}
+.rightword p{
+    font-size: 1.2vw;
+    padding:0 5%;
+    line-height: calc(8vw/3);
+    text-align: right;
+}
+.addbutton{
+    margin-top: 1.6em;
+    width:25%;
+    margin-left: 2.3em;
+    cursor: pointer;
+}
+input{
+    width: 100%;
+}
+.half{
+    width:45%;
+    float: left;
+    margin: 1em 1em;
+}
+.whole{
+    width:calc(100% - 4em);
+    float: left;
+    margin: 1em 1em;
+}
+form{
+    display: block;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+input{
+    border: 1.5px solid #B6BDA6;
+    color: black;
+    background-color: rgba(176,130,139,0);
+    height: 2em;
+    font-size: 1em;
+    margin-top: 1em;
+    padding-left: 0.3em;
+}
+label{
+   font-size: 1.4vw;
+    font-weight: 100;
+}
+#save{
+    width:12%;
+    margin-left: calc(88% - 2em);
+}
+.addressform{
+    padding-bottom: 4em;
+    display: none;
+}

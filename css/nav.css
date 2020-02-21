@@ -3,7 +3,11 @@ header{
     width: 100%;
     position: fixed;
     z-index: 1;
+    font-family: 'Quicksand', sans-serif;
 
+}
+a{
+    text-decoration: none;
 }
 .container{
     width:100%;
@@ -26,12 +30,12 @@ ul {
 
     position: absolute;
     height: 5rem;
-    width: 100%;
-    display: none;
+    width: 40%;
+    display:none;
 
     align-items: center;
-    margin-left: 4%;
-    padding-right: 8%;
+    margin-left: calc(3.2em + 22px);
+    padding-right: 0%;
 
 
 
@@ -41,15 +45,14 @@ ul {
 .c-main-nav__list {
     display: flex;
 
-    width: 50%;
+    width: 100%;
 
 }
 
 .c-main-nav__item {
     margin: 0 0;
-    padding: 0;
-    width:18%;
-    text-align: center;
+    padding:0 1.5em;
+
     white-space:nowrap;
 
 
@@ -97,15 +100,20 @@ ul {
     align-items: center;
     margin: 0  auto;
     width: 20%;
-    /*position: absolute;*/
+    
+
 
 }
 .center{
     height: 4.3rem;
     width: 11em;
+
     margin: 0.25em auto;
     display: block;
     cursor: pointer;
+    z-index: 10;
+
+
 }
 .right{
 

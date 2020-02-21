@@ -16,8 +16,8 @@ body {
 a {
 	color: #777785;
 	outline: none;
-	display: inline-block;
-	position: relative;
+	/*display: inline-block;*/
+	/*position: relative;*/
 	text-decoration: none;
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
@@ -211,17 +211,17 @@ main {
 	margin: 0 auto;
 	overflow: hidden;
 	/* we always want 7 boxes in a row */
-	padding: 3em calc((100vw - (3 * (10vw + 1vw)))/2);
+	padding: 5rem calc((100vw - (3 * (10vw + 1vw)))/2) ;
 }
 
 .js .calendar {
 	position: absolute;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
-	padding-top: 0;
+	padding-top: 5rem;
 	padding-right: calc((100vw - (3 * (10vw + 1vw))) / 2);
 	padding-left: calc((100vw - (3 * (10vw + 1vw))) / 2);
-	padding-bottom: 5em;
+	padding-bottom: 3em;
 }
 
 .no-js .calendar {

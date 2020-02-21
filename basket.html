@@ -13,13 +13,13 @@ li{list-style:none;}
 img{border:none;}
 .bleft{width:50%; height:100%;   position: fixed; background-color: #EEE9E0;}
 .slide{position:relative; margin:20% auto; width:60vh; overflow:hidden;}
-.slide .big{ position:relative; overflow:hidden; left:0;top:0;}
+.slide .big{ position:relative; height: 60vh; overflow:hidden; left:0;top:0;}
 .slide a{position:absolute; top:25vh; opacity:0;z-index:10;}
 .slide .big li{float:left; width:60vh; }
 .slide .big  li img{width:100%;display:block;}
 .slide .prev{left:-10px;}
 .slide .next{right:-10px;}
-.slide .small{ margin-top:5px; width:100px; position:relative;}
+.slide .small{ margin-top:5px; width:100px; height: 100px; overflow: hidden; position:relative;}
 .slide .small li{ float:left;margin-right:5px; width:90px; background:#000;}
 .slide .small li:last-child{ margin-right:0;}
 .slide .small li img{width:100%;display:block; opacity:0.5;}
@@ -113,9 +113,10 @@ span img{
 }
 
 </style>
+    <script src="js/menucon.js"></script>
 <script src="js/single_lb.js"></script>
 <script src="js/move1.js"></script>
-<script src="js/menucon.js"></script>
+
 </head>
 
 <body>
@@ -138,13 +139,13 @@ span img{
             </ul>
         </div>
         <div class="middle"><a href="index.html"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
-        <div class="right"><a href="log.html">Log in</a> <img onmouseover="document.getElementById('basket').style.display='block'" onmouseleave="document.getElementById('basket').style.display='none'" src="images/购物车图标.png" alt=""> </div>
+        <div class="right"><a href="log.html">Log in</a> <img onclick="basketshow()" src="images/购物车图标.png" alt=""> </div>
         <div id="basket" >
             <div class="box">
                 <img src="images2/xiuqiuhua.png" alt=""></div>
             <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>
 
-            <button>See Shopping Basket</button>
+            <button><a href="inbasket.html">See Shopping Basket</a></button>
         </div>
     </div>
 </header>
@@ -159,14 +160,12 @@ span img{
         <li><img src="images2/xiuqiuhua2.png"></li>
         <li><img src="images2/xiuqiuhua3.png"></li>
 
-
     </ul>
 
     <ol class="small">
         <li><img style="opacity:1" src="images2/xiuqiuhua.png"></li>
         <li><img src="images2/xiuqiuhua2.png"></li>
         <li><img src="images2/xiuqiuhua3.png"></li>
-
 
     </ol>
 

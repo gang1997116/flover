@@ -6,19 +6,35 @@
     <link type="text/css" rel="stylesheet" href="css/create-style.css">
     <link type="text/css" rel="stylesheet" href="css/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="js/menucon.js"></script>
 </head>
 <body>
 <header>
     <div class="container">
-        <div class="left"><img src="images/菜单标.png" alt=""></div>
-        <div class="middle"><a href="index.html"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
-        <div class="right"><a>Log in</a><img  src="images/购物车图标.png" alt=""> </div>
+        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="c-main-nav" id="nav1">
 
+            <ul class="c-main-nav__list" >
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link " href="index.html">Home</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link" href="boxes.html">All Product</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link" href="#coins">My Garden</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="middle"><a href="index.html"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
+        <div class="right" style="padding-right: 0em;padding-left: 2.2em"><a href="log.html">Log in</a>
+        </div>
     </div>
 </header>
 <main>
     <h1>Write Your Personal Details</h1>
-	
+<form id="myForm" action="log.php" method="post">
 <div class="old">
     <div class="content">
 	<label for="email">E-mail</label><br>
@@ -46,12 +62,12 @@
         <label for="lastname">Last Name</label><br>
         <input type="text" placeholder="Def">
 		<label for="birth">Date of Birth</label><br>
-        <input type="date" placeholder="Def">
+        <input type="date" id="birth" placeholder="YYYY-MM-DD ">
 
 </div>
 </div>
-  <img src="images/button8.png" alt="">
-		
+  <img onclick="document.getElementById('myForm').submit()" src="images/button8.png" alt="">
+</form>
 </main>
 </body>
 </html>
