@@ -79,7 +79,7 @@ ul {
     display: inline-block;
     margin: auto 0;
     float: left;
-    width: 10%;
+    width: 20%;
 
 
 }
@@ -125,10 +125,10 @@ ul {
     white-space:nowrap;
     color: white;
     font-size: 16px;
-    padding-right:1em;
+    padding-right:1.3em;
     margin: auto 0;
     width:100%;
-    text-align: center;
+    text-align: right;
 }
 .right a:hover {
     color: gray;

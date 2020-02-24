@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,25 +15,25 @@
     $password = $_POST['password'];
     $conn = new mysqli('127.0.0.1','s1919788','j9YxLg46Q5','s1919788');
     if ($conn->connect_error){
-        echo '数据库连接失败！';
+        echo 'fail to access the database！';
         exit(0);
     }else{
         if ($username == ''){
-            echo '<script>alert("请输入用户名！");history.go(-1);</script>';
+            echo '<script>alert("Please enter your email address.");history.go(-1);</script>';
             exit(0);
         }
         if ($password == ''){
-            echo '<script>alert("请输入密码！");history.go(-1);</script>';
+            echo '<script>alert("Please enter your password！");history.go(-1);</script>';
             exit(0);
         }
-        $sql = "select username,password from flower where username = '$_POST[username]' and password = '$_POST[password]'";
+        $sql = "select username,password from userinfo where username = '$_POST[username]' and password = '$_POST[password]'";
         $result = $conn->query($sql);
         $number = mysqli_num_rows($result);
         if ($number) {
 			$_SESSION["username"]=$username; //
-            echo '<script>window.location="index.html";</script>';
+            echo '<script>window.location="index.php";</script>';
         } else {
-            echo '<script>alert("用户名或密码错误！");history.go(-1);</script>';
+            echo '<script>alert("Please re-enter your email address and password.");history.go(-1);</script>';
         }
     }
 ?>

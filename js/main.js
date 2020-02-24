@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
@@ -14,7 +14,7 @@
 
 	// Helper vars and functions.
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -103,26 +103,26 @@
 
 		switch(dir) {
 			case 0 : // from/to top
-				animationSettings.rotateX = type === 1 ? -180 : 0; 
+				animationSettings.rotateX = type === 1 ? -180 : 0;
 				animationSettings.rotateY = 0;
-				break; 
+				break;
 			case 1 : // from/to right
-				animationSettings.rotateY = type === 1 ? -180 : 0; 
+				animationSettings.rotateY = type === 1 ? -180 : 0;
 				animationSettings.rotateX = 0;
-				break; 
+				break;
 			case 2 : // from/to bottom
-				animationSettings.rotateX = type === 1 ? 180 : 0; 
+				animationSettings.rotateX = type === 1 ? 180 : 0;
 				animationSettings.rotateY = 0;
-				break; 
+				break;
 			case 3 : // from/to left
-				animationSettings.rotateY = type === 1 ? 180 : 0; 
+				animationSettings.rotateY = type === 1 ? 180 : 0;
 				animationSettings.rotateX = 0;
 				break;
 		};
 
 		this.currentTransform = {
-			translateZ: animationSettings.translateZ, 
-			rotateX: animationSettings.rotateX, 
+			translateZ: animationSettings.translateZ,
+			rotateX: animationSettings.rotateX,
 			rotateY: animationSettings.rotateY
 		};
 
@@ -157,7 +157,7 @@
 	// From: https://codepen.io/noeldelgado/pen/pGwFx?editors=0110 by Noel Delgado (@noeldelgado).
 	Day.prototype._getDirection = function(ev) {
 		var obj = this.cube.querySelector('.cube__side--front'),
-			w = obj.offsetWidth, 
+			w = obj.offsetWidth,
 			h = obj.offsetHeight,
 			bcr = obj.getBoundingClientRect(),
 			x = (ev.pageX - (bcr.left + window.pageXOffset) - (w / 2) * (w > h ? (h / w) : 1)),
@@ -224,7 +224,7 @@
 					self._rotateCalendar(mousepos);
 				});
 			};
-			
+
 			this.handleOrientation = function() {
 				if( self.isOpen ) {
 					return false;
@@ -338,69 +338,94 @@
 			};
 		}
 		// Day/Cube click event.
-		instance.clickFn = function(ev) { window.location.href="basket.html"; };
-		// instance.clickFn = function(ev) {
-		// 	// If the day is inactive or if the calendar is currently animating then do nothing.
-		// 	if( !instance.isActive || self.isAnimating ) {
-		// 		return false;
-		// 	}
-		// 	self.isAnimating = true;
-		// 	self.isOpen = true;
-		// 	self.currentDayIdx = instance.number;
-		//
-		// 	// Hide the main container
-		// 	anime({
-		// 		targets: self.el,
-		// 		duration: 1200,
-		// 		easing: 'easeInOutExpo',
-		// 		opacity: 0,
-		// 		complete: function() {
-		// 			self.isAnimating = false;
-		// 		}
-		// 	});
-		//
-		// 	for(var i = 0, totalDays = self.days.length; i < totalDays; ++i) {
-		// 		var day = self.days[i];
-		//
-		// 		if( self.currentDayIdx === i ) {
-		// 			anime({
-		// 				targets: day.cube,
-		// 				duration: 600,
-		// 				delay: 200,
-		// 				easing: 'easeInExpo',
-		// 				scale: 1.1,
-		// 				translateY: -window.innerHeight*2,
-		// 				translateZ: day.currentTransform.translateZ,
-		// 				rotateX: day.currentTransform.rotateX,
-		// 				rotateY: day.currentTransform.rotateY
-		// 			});
-		//
-		// 			self._showContent(instance);
-		//
-		//
-		// 		}
-		// 		else {
-		// 			var bcr = day.cube.getBoundingClientRect();
-		// 			anime({
-		// 				targets: day.cube,
-		// 				duration: 1200,
-		// 				easing: 'easeInOutExpo',
-		// 				scale: 0.1,
-		// 				translateX: function(el, index) {
-		// 					return bcr.left + window.pageXOffset <= window.innerWidth/2 ? anime.random(-800,0) : anime.random(0,800);
-		// 				},
-		// 				translateY: function(el, index) {
-		// 					return bcr.top + window.pageYOffset <= window.innerHeight/2 ? anime.random(-1400,-200) : anime.random(-200,600);
-		// 				},
-		// 				translateZ: -1500,
-		// 				rotateY: function(el, index) {
-		// 					return bcr.left + window.pageXOffset <= window.innerWidth/2 ? anime.random(-40,0) : anime.random(0,40);
-		// 				}
-		// 			});
-		// 		}
-		// 	}
-		//
-		// };
+		//instance.clickFn = function(ev) { window.location.href="basket.php?id=1"; };
+		instance.clickFn = function(ev) {
+			// If the day is inactive or if the calendar is currently animating then do nothing.
+			if( !instance.isActive || self.isAnimating ) {
+				return false;
+			}
+			self.isAnimating = true;
+			self.isOpen = true;
+			self.currentDayIdx = instance.number;
+
+			// Hide the main container
+			// anime({
+			// 	targets: self.el,
+			// 	duration: 1200,
+			// 	easing: 'easeInOutExpo',
+			// 	opacity: 0,
+			// 	complete: function() {
+			// 		self.isAnimating = false;
+			// 	}
+			// });
+
+			for(var i = 0, totalDays = self.days.length; i < totalDays; ++i) {
+				var day = self.days[i];
+
+				if( self.currentDayIdx === i ) {
+					anime({
+						targets: day.cube,
+						duration: 600,
+						delay: 200,
+						easing: 'easeInExpo',
+						scale: 1.1,
+						translateY: -window.innerHeight*2,
+						translateZ: day.currentTransform.translateZ,
+						rotateX: day.currentTransform.rotateX,
+						rotateY: day.currentTransform.rotateY
+					});
+switch(i){
+	case 0:
+		window.location.href="basket.php?id=1";
+		break;
+		case 1:
+	window.location.href="basket.php?id=2";
+			break;
+	case 2:
+		window.location.href="basket.php?id=3";
+		break;
+	case 3:
+		window.location.href="basket.php?id=4";
+		break;
+	case 4:
+		window.location.href="basket.php?id=5";
+		break;
+		case 5:
+		window.location.href="basket.php?id=6";
+		break;
+	default:
+		window.location.href="basket.php?id=1";
+
+}
+
+
+  
+					//self._showContent(instance);
+
+
+				}
+				else {
+					var bcr = day.cube.getBoundingClientRect();
+					anime({
+						targets: day.cube,
+						duration: 1200,
+						easing: 'easeInOutExpo',
+						scale: 0.1,
+						translateX: function(el, index) {
+							return bcr.left + window.pageXOffset <= window.innerWidth/2 ? anime.random(-800,0) : anime.random(0,800);
+						},
+						translateY: function(el, index) {
+							return bcr.top + window.pageYOffset <= window.innerHeight/2 ? anime.random(-1400,-200) : anime.random(-200,600);
+						},
+						translateZ: -1500,
+						rotateY: function(el, index) {
+							return bcr.left + window.pageXOffset <= window.innerWidth/2 ? anime.random(-40,0) : anime.random(0,40);
+						}
+					});
+				}
+			}
+
+		};
 		instance.cube.querySelector('.cube__side--front').addEventListener('mouseenter', instance.mouseenterFn);
 		instance.cube.addEventListener('mouseleave', instance.mouseleaveFn);
 		instance.cube.addEventListener('click', instance.clickFn);
@@ -414,14 +439,14 @@
 		var movement = {rx:3, ry:3},
 			rotX = 2 * movement.rx / this.cubes.offsetHeight * mousepos.y - movement.rx,
 			rotY = 2 * movement.ry / this.cubes.offsetWidth * mousepos.x - movement.ry;
-		
+
 		this.cubes.style.WebkitTransform = this.cubes.style.transform = 'rotate3d(-1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg)';
 	};
 
 	Calendar.prototype._showPreviewTitle = function(text, number) {
 		this.dayPreview.innerHTML = text;
 		this.dayPreview.setAttribute('data-number', parseInt(number+1));
-		
+
 		this.txtfx = new TextFx(this.dayPreview);
 		this.txtfx.hide();
 		this.dayPreview.style.opacity = 1;
