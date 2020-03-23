@@ -1,0 +1,130 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body,html{
+            background-color: #E9D4CC;
+        }
+        .float-flower{
+            visibility: visible;
+            position:relative;
+            z-index:1000;
+            width:50px;
+            height:50px;
+
+        }
+        .float-box{
+            position: absolute;
+            width:200px;
+            height: 200px;
+        }
+        .ani1{
+            animation:float-flower1 8s infinite;}
+        .ani2{
+            animation:float-flower2 8s infinite;}
+
+        /*从右上到左下运动*/
+        @keyframes float-flower1{
+
+            0%{
+                opacity: 0;
+                padding-top:0;
+                padding-left:0;}
+            25%{
+                padding-top:30px;
+                padding-left: 30px;
+                opacity: 0.9;
+            }
+            100%{
+                padding-top:150px;
+                padding-left: 150px;
+                opacity: 0;
+            }
+
+
+        }
+        /*从左下到右上运动*/
+        @keyframes float-flower2{
+
+            0%{opacity: 0;
+                padding-top:150px;
+                padding-left:0;}
+            25%{
+                padding-top:120px;
+                padding-left: 30px;
+                opacity: 0.9;
+            }
+            100%{
+                padding-top:0px;
+                padding-left: 150px;
+                opacity: 0;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="body">
+    <!--漂浮图片 2017.5.24-->
+    <div id="float-box1" class="float-box ani1">
+    <div  class="float-flower" οnmοuseοver="window.clearInterval(timer)" οnmοuseοut="timer=window.setInterval('changePos()',delay);">
+        <a href="http://www.baidu.cn/"><img src="garden-images/floatflower.svg" style="width:50px; height:50px;" /></a>
+    </div></div>
+    <div id="float-box2" class="float-box ani2">
+        <div  class="float-flower" οnmοuseοver="window.clearInterval(timer)" οnmοuseοut="timer=window.setInterval('changePos()',delay);">
+            <a href="http://www.baidu.cn/"><img src="garden-images/floatflower.svg" style="width:50px; height:50px;" /></a>
+        </div></div>
+
+
+    <script type="text/javascript" language="JavaScript">
+
+        window.onload=function(){
+        newflower();
+        setInterval(newflower,8000);
+        }
+
+
+        var i=1;
+        var timer;
+        var n=5; //花朵总数
+        var delay= 20;//移动速度
+        function newflower() {
+            newobj(1);
+            newobj(2);
+        }
+         function newobj(i) {
+            var obj;
+            id="float-box"+i;
+
+            obj=document.getElementById(id);
+            obj.style.visibility = 'visible';
+             if(i==1){ //左边花朵的位置
+            obj.style.top=randomNum(clientHeight-200)+"px";
+            obj.style.left=randomNum(clientWidth/2-200)+"px";}
+             else if(i==2){ //右边花朵的位置
+             obj.style.top=randomNum(clientHeight-200)+"px";
+             obj.style.left=clientWidth/2+randomNum(clientWidth/2-200)+"px";}
+
+
+         }
+
+        var clientHeight=document.documentElement.clientHeight;
+        var clientWidth=document.documentElement.clientWidth;
+        window.οnresize=function(){ clientHeight=document.documentElement.clientHeight; clientWidth=document.documentElement.clientWidth; }
+        function randomNum(size){ return Math.floor(Math.random()*(size-50+1)); } //生成随机数
+
+
+        //用js实现花朵的移动，这次用的是css动画
+        //var flagY=true;var flagX=false;
+        // function changePos(obj){var y=parseInt(obj.style.top); if(flagY){ y++; if(y>clientHeight-50){ flagY=false; } }else{ y--; if(y<0){ flagY=true; } } obj.style.top=y+"px";
+        //     var x=parseInt(obj.style.left);if(flagX){ x++; if(x>clientWidth-50){ flagX=false; } }else{ x--; if(x<0){ flagX=true; } } obj.style.left=x+"px";}
+        // function creatTimer(){timer = window.setInterval("changePos();",delay);}
+        // function hide() {obj.style.display = "none";
+        // obj.onmouseout = function() {obj.style.visibility = "hidden";}}
+
+    </script>
+</div>
+</body>
+</html>
