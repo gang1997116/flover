@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Garden</title>
+    <link type="text/css" rel="stylesheet" href="css/garden_style.css">
+    <link type="text/css" rel="stylesheet" href="css/nav.css">
+    <script>
+        var i=1;
+        window.onload=Setflower;
+
+        function Setflower(){
+            var flower=document.getElementById("flower");
+        if(i==1) {
+            flower.src = "garden-images/1.svg";
+            flower.style.right = "3.3vh";
+        }
+            else if(i>1&&i<7) {
+            flower.src = "garden-images/"+i+".svg";
+            flower.style.right="1.2vh";
+        }
+            else if(i>=7){
+            flower.src="garden-images/flower.svg";
+        }
+        }
+
+        function waterani() {
+
+            //给要启用动画的标签绑定设置好的css动画
+            document.getElementById("bottle").style.animation = "waterbottleani 4s 1";
+            document.getElementById("waters").style.animation = "waterani 0.8s 1";
+            document.getElementById("waters").style.animationDelay = "2s";
+            document.getElementById("flower").style.animation = "flower 0.6s 1";
+            document.getElementById("flower").style.animationDelay = "2.7s";
+            document.getElementById("bottle").style.zIndex = "4";
+            setTimeout(stopani,4000);
+     }
+        function stopani(){
+            i++;
+
+            Setflower();
+            //展示完成后，删除绑定的动画，以便可以下次触发的时候可以再次显示动画效果
+            document.getElementById("bottle").style.animation = "none";
+            document.getElementById("bottle").style.zIndex = "200";
+            document.getElementById("waters").style.animation = "none";
+            document.getElementById("flower").style.animation = "none";
+
+        }
+        function hand(h)  //鼠标变手型
+        {
+            var hh = document.getElementById(h);
+            hh.style.cursor="pointer";
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="c-main-nav" id="nav1">
+
+            <ul class="c-main-nav__list" >
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link " href="index.html">Home</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link" href="boxes.html">All Product</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link" href="garden.html">My Garden</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="middle"><a href="index.html"><img  class="center" src="images/logo.svg" alt=""></a> </div>
+        <div class="right">
+            <a href="log.html">Log in</a>
+            <img onclick="basketshow()" id="basketbt" src="images/购物车图标.png" alt=""> </div>
+        <div id="basket" >
+            <div class="box">
+                <img src="images2/xiuqiuhua.png" alt=""></div>
+            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>
+
+            <button><a href="inbasket.html">See Shopping Basket</a></button>
+        </div>
+    </div>
+</header>
+<div class="garden">
+<div class="room">
+    <div class="window"></div>
+    <img class="window-bg"  src="garden-images/windowbg.png">
+    <img class="dialog-left" src="garden-images/dialog-left.svg" alt="">
+    <img class="dialog-right" src="garden-images/dialog-right.svg" alt="">
+
+        <img id="flower" class="flower" src="garden-images/flower.svg" alt="">
+
+
+
+    <div class="flower-base">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.64 167.23">
+
+            <rect class="cls-4" width="273.64" height="40.2"/>
+            <polygon class="cls-3" points="201.25 166.7 77.57 167.23 22.92 40.68 253.28 39.71 201.25 166.7"/>
+        </svg>
+    </div>
+
+    <img onclick="waterani()"  onmousemove="hand('bottle')" class="waterbottle" id="bottle" src="garden-images/水壶.svg" alt="">
+    <img class="topbottle" src="garden-images/水壶.svg" alt="">
+
+    <img id="waters" class="water" src="garden-images/水滴_1.svg">
+
+    <div class="flower-single">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.4 55.84">
+            <path fill="#8c0e03" d="M1,.82C1.45-.11,2.25-.82,3.19,2c0,0,3.6,20.62,20.63,27.43,0,0,14.38,6.44,34.43-1.89,0,0,3.79-3,1.52,1.89,0,0-9.84,18.55-26.49,18.17,0,0-2.65.75-6.82-2.65,0,0-1.68-1.12-6.5,0a12.31,12.31,0,0,1-8.87-1.26C7,41.4,2.18,36.41.73,25.67c0,0-1.47-8.82-.24-23A5.08,5.08,0,0,1,1,.82Z"/>
+            <path fill="#8c0e03" d="M75,5.72s6.14-2.24,11.73,0c0,0,4.48,1.67,12.86,11.18,0,0,5.59,5.59,7.83,7.26,0,0,3.35,2.24-1.68,2.24,0,0-13.42,0-19-6.15C86.75,20.25,70,9.63,75,5.72Z"/>
+            <path fill="#8c0e03" d="M134.51,29.32c.37,0,4-.55,4.45-.46,0,0,4.1-.65,9.71-4.53,0,0,4.75-2.59,1.73,3.88,0,0-3.89,11.22-12.52,17.26,0,0-11.22,9.93-17.26,10.36,0,0-1.94.22,1.51-2.8,0,0,6.9-6,8.2-11.22,0,0,.31-4.71.47-9.17A3.43,3.43,0,0,1,134.51,29.32Z"/>
+        </svg>
+    </div>
+    <div class="window-sill">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 767.12 129">
+    <rect class="cls-3" x="6.81" y="108.72" width="753" height="20.28" rx="10.14"/>
+    <path fill="#F7F0DF" d="M100.81,0l577,1.23,87.43,104.25c5.74,6.84-2.34,15-14.86,15H16.74c-12.86,0-20.91-8.56-14.48-15.41Z"/>
+    </svg>
+</div>
+<p>Welcome to XX’s Garden!</p>
+</div>
+    <div class="align-leftcurtain">
+        <svg height="100vh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1608 960">
+            <g >
+                <rect class="cls-1" x="0" y="0" width="1200" height="100%" />
+                <path class="cls-1" d="M0,0H408S306,325,62,480v63L235,960H0" transform="translate(1200 0)"/>
+
+
+                <animateTransform attributeName="transform"
+                                  attributeType="XML"
+                                  type="translate"
+                                  from="0 0"
+                                  to="-1200 0"
+                                  dur="2s"
+                                  fill="freeze"
+                />
+            </g>
+            <rect class="cls-2" y="481" width="62" height="62" opacity="0" transform="translate(62 1024) rotate(-180)">
+                <animate attributeName="opacity"
+                         from="0" to="1" begin="2s" dur="0.1s" fill="freeze" />
+            </rect>
+        </svg>
+    </div>
+    <div class="align-rightcurtain">
+        <svg height="100vh" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1608 960">
+            <g >
+                <rect class="cls-1" x="0" y="0" width="1200" height="100%" transform="translate(408 0)"/>
+                <path class="cls-1" d="M408,0H0S102,325,346,480v63L173,960H408" />
+                <animateTransform attributeName="transform"
+                                  attributeType="XML"
+                                  type="translate"
+                                  from="0 0"
+                                  to="1200 0"
+                                  dur="2s"
+                                  fill="freeze"
+                />
+            </g>
+            <rect class="cls-2" x="346" y="481" width="62" height="62" opacity="0" transform="translate(1200 0)">
+                <animate attributeName="opacity"
+                         from="0" to="1" begin="2s" dur="0.1s" fill="freeze" />
+            </rect>
+        </svg>
+    </div>
+
+</div>
+<script src="js/menucon.js"></script>
+</body>
+</html>
