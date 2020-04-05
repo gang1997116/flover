@@ -63,7 +63,7 @@ function startMove(obj,json,fnEnd)
 		}
 	},30)
 }*/
-window.onload=function()
+window.onload=function slides()
 {
 	var aSlide=document.getElementById('single_lb');
 	var aBig=getByClass(aSlide,'big')[0];
@@ -89,11 +89,11 @@ window.onload=function()
 	}
 	aSlide.onmouseover=function()
 	{
-		clearInterval(timer);	
+		//clearInterval(timer);
 	}
 	aSlide.onmouseout=function()
 	{
-		clearInterval(timer);
+		//clearInterval(timer);
 		//timer=setInterval(aNext.onclick,3000)
 	}
 	for(var i=0;i<aSmallLi.length;i++)

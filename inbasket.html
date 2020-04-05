@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,138 +6,25 @@
     <title>basket</title>
     <link type="text/css" rel="stylesheet" href="css/account_style.css">
     <link type="text/css" rel="stylesheet" href="css/nav.css">
+    <link type="text/css" rel="stylesheet" href="css/inbasket_style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="js/menucon.js"></script>
-    <style>
-  body,html{
-            background-color: #E7D6CE;
-            height: fit-content;
+    <script src="js/inbasket.js"></script>
 
-        }
-  .product{
-      height: 10vw;
-
-  }
-  .product img{
-      position: relative;
-      width: calc(10vw + 4px);
-      height: calc(10vw + 4px);
-      display: block;
-      float: left;
-      padding-left: 3em;
-  }
-  .productdetail{
-      float: left;
-      margin-left: 2em;
-      height: 100%;
-      width: calc(100% - 19vw);
-      border: 2px solid #B6BDA6;
-      align-items: center;
-  }
-  .leftword p,.rightword p{
-      line-height: calc(10vw/3);
-      font-size: 1.4vw;
-  }
-.addressform{
-    display: block;
-    margin: 1rem 3rem;
-    background-color: #ECE7DE;
-    position: relative;
-}
-
-        .continue{
-            margin-top:2em;
-            width:16%;
-            margin-left: calc(84% - 2em);}
-        .whole{
-            width: calc(90% + 2em);;
-        }
-        h1{
-
-            font-size:60px;
-            text-align: center;
-            font-weight: 200;
-
-        }
-        .toptitle{
-            padding: 6.7em 0 0;
-            height: 25vh;
-            /*line-height: 25vh;*/
-
-        }
-        .toptitle img{
-            position:absolute;
-            /*z-index: 0;*/
-            height: 25vh;
-            display: block;
-            width: 44.3vh;
-            padding: 0 calc((100% - 44.3vh)/2);
-
-        }
-        .chuizhijuzhong{
-            position: absolute;
-            padding-top:10vh ;
-            /*vertical-align:middle;*/
-            /*display: inline-block;*/
-            /*height: 5vh;*/
-            line-height: 5vh;
-            font-size:58px;
-            text-align: center;
-            font-weight: 200;
-            width:100%;
-            font-family: 'Montserrat';
-        }
-        #forcontinue{
-            display: none;
-        }
-        #save{
-
-            height: 1px;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        #gotopay{
-            width:15%;
-            margin-left: calc(85% - 2em);
-        }
-        .banner-button {
-            width: 96%;
-            vertical-align: middle;
-            text-align: right;
-
-            margin-top: 5%;
-            padding-bottom: 5%;
-
-
-        }
-        .banner-button a {
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-            height: auto;
-            width: auto;
-            line-height: 100%;
-            padding: 15px 0px;
-            position: relative;
-            font-size: 1.5em;
-            cursor: pointer;
-            font-weight: 100;
-        }
-        .banner-button img{
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-            width: 3em;
-            margin-left: -1em;
-
-        }
-    </style>
 </head>
 <body>
+<!--漂浮图片 -->
+<div id="float-box1" class="float-box ani1">
+    <div  class="float-flower" οnmοuseοver="window.clearInterval(timer)" οnmοuseοut="timer=window.setInterval('changePos()',delay);">
+        <a href="garden.html"><img src="images/floatflower.svg" style="width:50px; height:50px;" /></a>
+    </div></div>
+<div id="float-box2" class="float-box ani2">
+    <div  class="float-flower" οnmοuseοver="window.clearInterval(timer)" οnmοuseοut="timer=window.setInterval('changePos()',delay);">
+        <a href="garden.html"><img src="images/floatflower.svg" style="width:50px; height:50px;" /></a>
+    </div></div>
 <header>
     <div class="container">
-        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="left"></div>
         <div class="c-main-nav" id="nav1">
 
             <ul class="c-main-nav__list" >
@@ -147,46 +35,53 @@
                     <a class="c-main-nav__link" href="boxes.html">All Product</a>
                 </li>
                 <li class="c-main-nav__item">
-                    <a class="c-main-nav__link" href="#coins">My Garden</a>
+                    <a class="c-main-nav__link" href="garden.html">My Garden</a>
                 </li>
 
             </ul>
         </div>
-        <div class="middle"><a href="index.html"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
-        <div class="right"><a href="log.html">Log in</a> <img onclick="basketshow()" src="images/购物车图标.png" alt=""> </div>
+        <div class="middle"><a href="index.html"><img  class="center" src="images/logo.svg" alt=""></a> </div>
+        <div class="right">
+            <a href="log.html">Log in</a>
+            <img onclick="basketshow()" id="basketbt" src="images/购物车图标.png" alt=""> </div>
         <div id="basket" >
-            <div class="box">
-                <img src="images2/xiuqiuhua.png" alt=""></div>
-            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>
 
-            <button ><a href="inbasket.html">See Shopping Basket</a></button>
+            <button><a href="inbasket.html">See Shopping Basket</a></button>
         </div>
     </div>
 </header>
 
-<div class="toptitle" id="top">
-    <img src="images/圆圈装饰.png" alt="">
-<div class="chuizhijuzhong">
-Thank you for choosing Flover</div></div>
+<div class="content" id="content">
+    <div class="toptitle" id="top">
+        <img src="images/圆圈装饰.png" alt="">
+        <div class="chuizhijuzhong">
+            Thank you for choosing Flover</div></div>
 <div class="inner" >
+    <div class="shoplist">
     <h3>You choosed:</h3>
-    <div class="product">
-        <img src="images2/xiuqiuhua.png" alt="">
-        <div class="productdetail">
-            <div class="leftword">
-                <p id="flowername">Hydrangea</p>
-                <p id="pprice">5.99 GBP</p>
-                <p id="quantity">X1</p>
-            </div>
-            <div class="rightword">
-                <p>Subtotal:</p>
-                <p id="tprice">5.99 GBP</p>
-            </div>
-        </div>
+<!--    <div class="product">-->
+<!--        <img src="images2/xiuqiuhua.png" alt="">-->
+<!--        <div class="productdetail">-->
+<!--            <div class="leftword">-->
+<!--                <p class="flowername">Hydrangea</p>-->
+<!--                <p><span class="pprice">5.99</span><span> GBP</span></p>-->
+<!--                <p ><span>X</span><span class="quantity">1</span><img class="addquantity" src="images/加号.svg" alt=""><img class="reducequantity" src="images/减号.svg" alt=""></p>-->
+<!--            </div>-->
+<!--            <div class="rightword">-->
+<!--                <a class="deleteitem-button"><p>-->
+<!--        <svg t="1585580503303" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3829" width="200" height="200"><path d="M512 1255.489906" p-id="3830" fill="#B6BDA6"></path><path d="M718.519288 688.227064 543.827304 513.637418l174.180292-174.180292c8.801119-8.801119 8.801119-23.128523 0-31.827304-8.801119-8.801119-23.128523-8.801119-31.827304 0L512 481.810114 337.819708 307.629822c-8.801119-8.801119-23.230861-8.596442-31.929642 0.102339l0.102339-0.102339c-8.801119 8.801119-8.698781 23.026184 0.102339 31.827304l174.180292 174.180292L305.58305 688.227064c-8.801119 8.801119-8.801119 23.128523 0 31.827304 8.801119 8.801119 23.128523 8.801119 31.827304 0L512 545.464721 686.691985 720.054367c8.801119 8.801119 22.923846 8.903458 31.724965 0.102339l0.102339-0.102339C727.218069 711.355587 727.218069 697.028183 718.519288 688.227064z" p-id="3831" fill="#B6BDA6"></path></svg>-->
+
+        <!--                 </p></a>-->
+<!--                <p>Subtotal:</p>-->
+<!--                <p><span class="tprice">5.99</span><span> GBP</span></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     </div>
-
-
-    <img onclick="document.getElementById('forcontinue').style.display='block'" class="continue" src="images/continue.png" alt="">
+<div class="total-price">
+    <span>Total: </span><span id="wprice">0.00</span><span>GBP</span>
+</div>
+    <img onclick="document.getElementById('forcontinue').style.display='block'; " class="continue" src="images/continue.png" alt="">
 <div id="forcontinue">
     <h3 style="margin-top: 1.6em">Deliver address</h3>
     <div class="addressform" id="addressform">
@@ -259,10 +154,66 @@ Thank you for choosing Flover</div></div>
             <a href=""><img id="save" style="visibility: hidden"  src="images/save.png" alt=""></a>
         </form>
     </div>
-    <a href=""><img id="gotopay"  onclick="document.getElementById('myForm').submit()" src="images/gotopay.png" alt=""></a>
+    <img id="gotopay"  onclick="document.getElementsByClassName('finishnotice')[0].style.display='block'" src="images/gotopay.png" alt="">
     <div class="banner-button"><img src="images/button6.png" alt=""> <a href="#top">Back to top</a></div>
+</div>
+</div>
+</div>
+<div class="finishnotice center-center">
+    <img src="images/close.svg" alt="" onclick="this.parentElement.style.display='none'">
+    <div class="noticeword">
+    <p style="font-size: 1.6em">Your order has been completed!</p>
+    <p style="font-size: 1em; padding-top: 1vh">Don't forget to get your virtual flower online!</p>
+    </div>
+    <a class="gotogarden" href="garden.html"><img src="images/gotogarden.svg" alt=""></a>
+</div>
+<script type="text/javascript" language="JavaScript">
 
-</div>
-</div>
+    window.onload=function(){
+        newflower();
+        setInterval(newflower,8000); //重新定位
+    }
+
+
+    var i=1;
+    var timer;
+    var n=5; //花朵总数
+    var delay= 20;//移动速度
+
+    function newflower() {
+        newobj(1);
+        newobj(2);
+    }
+    function newobj(i) {
+        var obj;
+        id="float-box"+i;
+
+        obj=document.getElementById(id);
+        obj.style.visibility = 'visible';
+        if(i==1){ //左边花朵的位置
+            obj.style.top=100+randomNum(clientHeight-200)+"px";
+            obj.style.left=randomNum(clientWidth/2-200)+"px";}
+        else if(i==2){ //右边花朵的位置
+            obj.style.top=100+randomNum(clientHeight-200)+"px";
+            obj.style.left=clientWidth/2+randomNum(clientWidth/2-200)+"px";}
+
+
+    }
+
+    var clientHeight=document.documentElement.clientHeight;
+    var clientWidth=document.documentElement.clientWidth;
+    window.οnresize=function(){ clientHeight=document.documentElement.clientHeight; clientWidth=document.documentElement.clientWidth; }
+    function randomNum(size){ return Math.floor(Math.random()*(size-200+1)); } //生成随机数
+
+
+    //用js实现花朵的移动，这次用的是css动画
+    //var flagY=true;var flagX=false;
+    // function changePos(obj){var y=parseInt(obj.style.top); if(flagY){ y++; if(y>clientHeight-50){ flagY=false; } }else{ y--; if(y<0){ flagY=true; } } obj.style.top=y+"px";
+    //     var x=parseInt(obj.style.left);if(flagX){ x++; if(x>clientWidth-50){ flagX=false; } }else{ x--; if(x<0){ flagX=true; } } obj.style.left=x+"px";}
+    // function creatTimer(){timer = window.setInterval("changePos();",delay);}
+    // function hide() {obj.style.display = "none";
+    // obj.onmouseout = function() {obj.style.visibility = "hidden";}}
+
+</script>
 </body>
 </html>

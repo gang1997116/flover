@@ -4,125 +4,30 @@
 <meta charset="utf-8">
 <title>Product Details</title>
     <link type="text/css" rel="stylesheet" href="css/nav.css">
+    <link type="text/css" rel="stylesheet" href="css/basket_style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<style>
-body,html{ position: absolute; bottom:0; left:0; top:0; width: 100%; height:100%; background-color: #ffffff; font-family: 'Quicksand', sans-serif;}
-*{padding:0; margin:0;}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
-li{list-style:none;}
-img{border:none;}
-.bleft{width:50%; height:100%;   position: fixed; background-color: #EEE9E0;}
-.slide{position:relative; margin:20% auto; width:60vh; overflow:hidden;}
-.slide .big{ position:relative; height: 60vh; overflow:hidden; left:0;top:0;}
-.slide a{position:absolute; top:25vh; opacity:0;z-index:10;}
-.slide .big li{float:left; width:60vh; }
-.slide .big  li img{width:100%;display:block;}
-.slide .prev{left:-10px;}
-.slide .next{right:-10px;}
-.slide .small{ margin-top:5px; width:100px; height: 100px; overflow: hidden; position:relative;}
-.slide .small li{ float:left;margin-right:5px; width:90px; background:#000;}
-.slide .small li:last-child{ margin-right:0;}
-.slide .small li img{width:100%;display:block; opacity:0.5;}
-.bright{
-    width:50%;  display: block; position: relative; background-color: #E9D8D0;
-    margin-left: 50%;
-}
-
-a{
-    cursor: pointer;
-
-    text-decoration: none;
-    color: #000;
-
-}
-h1{
-        padding-top: 20%;
-        padding-bottom: 6%;
-        font-size:90px;
-        text-align: center;
-        font-weight: 200;
-    }
-h2{
-    padding:2% 12% 1%;
-    font-size: 1.8em;
-    font-weight: 200;
-}
-p{
-    padding:2% 12%;
-    text-align: left;
-    line-height: 25px;
-    font-size: 1.2em;
-    font-weight: 100;
-    word-wrap:break-word;
-    word-break:normal;
-}
-span{
-    padding:2% 12%;
-    font-size: 1.6em;
-    font-weight: 100;
-}
-span img{
-    width:40%;
-}
-#add{
-    padding-left: 58%;
-    padding-right: 12%;
-    width:30%;
-    margin-top: -7%;
-}
-#price{ font-size: 1.2em; padding:10% 12% 0% 12%;}
-.banner-top-one {
-    margin-top: 7%;
-    margin-bottom:7%;
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 60%;
-    background-color: #D6D6C0;
-    height: 12px;
-}
-.banner-button {
-    width: 96%;
-    vertical-align: middle;
-    text-align: right;
-
-    margin-top: 15%;
-	padding-bottom: 5%;
-
-
-}
-.banner-button a {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    height: auto;
-    width: auto;
-    line-height: 100%;
-    padding: 15px 0px;
-    position: relative;
-    font-size: 1.5em;
-    cursor: pointer;
-    font-weight: 200;
-}
-.banner-button img{
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    width: 3em;
-    margin-left: -1em;
-
-}
-
-</style>
     <script src="js/menucon.js"></script>
-<script src="js/single_lb.js"></script>
-<script src="js/move1.js"></script>
+    <script src="js/single_lb.js"></script>
+    <script src="js/move1.js"></script>
+    <script src="js/shopcart.js" async></script>
+    <script>
+$(window).ready(function () {
+    if(typeof(Cookies.get('username')) !="undefined")
+    {document.getElementById('log').innerHTML=Cookies.get('username');
+        document.getElementById('log').href="account.html";
+    }
+})
 
+    </script>
 </head>
 
 <body>
 <header>
     <div class="container">
-        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="left"></div>
         <div class="c-main-nav" id="nav1">
 
             <ul class="c-main-nav__list" >
@@ -133,20 +38,25 @@ span img{
                     <a class="c-main-nav__link" href="boxes.html">All Product</a>
                 </li>
                 <li class="c-main-nav__item">
-                    <a class="c-main-nav__link" href="#coins">My Garden</a>
+                    <a class="c-main-nav__link" href="garden.html">My Garden</a>
                 </li>
 
             </ul>
         </div>
-        <div class="middle"><a href="index.html"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
-        <div class="right"><a href="log.html">Log in</a> <img onclick="basketshow()" src="images/购物车图标.png" alt=""> </div>
+        <div class="middle"><a href="index.html"><img  class="center" src="images/logo.svg" alt=""></a> </div>
+        <div class="right"><a id="log" href="log.html">Log in</a>
+            <img onclick="basketshow()" src="images/购物车图标.png" alt=""> </div>
         <div id="basket" >
-            <div class="box">
-                <img src="images2/xiuqiuhua.png" alt=""></div>
-            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>
+<!--            <div class="cart-item">-->
+<!--            <div class="box">-->
+<!--            <img src="images2/xiuqiuhua.png" alt=""></div>-->
+<!--            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>-->
+<!--            </div>-->
 
             <button><a href="inbasket.html">See Shopping Basket</a></button>
+
         </div>
+
     </div>
 </header>
 <div class="bleft" >
@@ -156,7 +66,7 @@ span img{
 	<a href="javascript:;" class="prev"><img src="images2/prev.png"></a>
     <a href="javascript:;" class="next"><img src="images2/next.png"></a>
     <ul class="big">
-        <li><img src="images2/xiuqiuhua.png"></li>
+        <li><img class="shop-item-image" src="images2/xiuqiuhua.png"></li>
         <li><img src="images2/xiuqiuhua2.png"></li>
         <li><img src="images2/xiuqiuhua3.png"></li>
 
@@ -173,10 +83,12 @@ span img{
 </div>
 
 <div class="bright" id="top">
-<h1>Hydrangea</h1>
+<h1 class="shop-item-title" >Hydrangea</h1>
     <p>It is a genus of 70–75 species of flowering plants native to Asia and the Americas. By far the greatest species diversity is in eastern Asia, notably Korea, China, and Japan. Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30m by climbing up trees. They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.
     </p>
-    <p id="price">- Price: 5.99 GBP</p> <a onclick="document.getElementById('basket').style.display='block'"><img id="add" src="images/button1.png" alt=""></a>
+    <p><span class="price">- Price: </span><span class="shop-item-price" id="price">5.99</span><span> GBP</span></p>
+    <div id="addednotice" class="addednotice"><p>You have already added this item.</p></div>
+    <img onclick="document.getElementById('basket').style.display='block'" id="add" src="images/button1.png" alt="">
     <div class="banner-top-one"> </div>
     <h2>Meanings of flowers</h2>
     <p>The hydrangea has a wide range of meanings, from heartfelt emotion to gratitude to boastfulness. Each meaning stems from different cultural beliefs and stories.</p>
@@ -199,7 +111,7 @@ span img{
     <p> Set the plant in the hole and fill it half full with soil. Water. After water is drained, fill the rest of the hole with soil.</p>
 
     <p>Water thoroughly.</p>
-<span><img src="images/温度条.png" alt=""> 18 - 28℃</span>
+<p><span><img src="images/温度条.png" alt=""> 18 - 28℃</span></p>
 
     <div class="banner-button"><img src="images/button6.png" alt=""> <a href="#top">Back to top</a></div>
 

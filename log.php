@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="css/log-style.css">
     <link type="text/css" rel="stylesheet" href="css/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <?php

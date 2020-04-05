@@ -7,7 +7,11 @@ body,html{ position: absolute;
 
 .bleft{width:28%; height:100%;
     position: fixed;
-    background-color: #E9D8D0;}
+    background-image: url("../images/account-leftbg.svg");
+    background-position:  50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .bright{
     width:72%;  position: relative; background-color: #EEE9E0; padding-top: 8rem;
@@ -71,6 +75,7 @@ p{
 
 }
 .product img{
+    box-sizing: content-box;
     position: relative;
     width: 8vw;
     height: 8vw;

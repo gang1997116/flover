@@ -374,32 +374,30 @@
 						rotateX: day.currentTransform.rotateX,
 						rotateY: day.currentTransform.rotateY
 					});
-switch(i){
-	case 0:
-		window.location.href="basket.php?id=1";
-		break;
-		case 1:
-	window.location.href="basket.php?id=2";
-			break;
-	case 2:
-		window.location.href="basket.php?id=3";
-		break;
-	case 3:
-		window.location.href="basket.php?id=4";
-		break;
-	case 4:
-		window.location.href="basket.php?id=5";
-		break;
-		case 5:
-		window.location.href="basket.php?id=6";
-		break;
-	default:
-		window.location.href="basket.php?id=1";
+// switch(i){
+// 	case 0:
+// 		window.location.href="basket.php?id=1";
+// 		break;
+// 		case 1:
+// 	window.location.href="basket.php?id=2";
+// 			break;
+// 	case 2:
+// 		window.location.href="basket.php?id=3";
+// 		break;
+// 	case 3:
+// 		window.location.href="basket.php?id=4";
+// 		break;
+// 	case 4:
+// 		window.location.href="basket.php?id=5";
+// 		break;
+// 		case 5:
+// 		window.location.href="basket.php?id=6";
+// 		break;
+// 	default:
+		window.location.href="basket.html";
 
-}
+//}
 
-
-  
 					//self._showContent(instance);
 
 

@@ -6,12 +6,17 @@
     <title>Garden</title>
     <link type="text/css" rel="stylesheet" href="css/garden_style.css">
     <link type="text/css" rel="stylesheet" href="css/nav.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/basket.js" async></script>
     <script>
         var i=1;
         window.onload=Setflower;
 
         function Setflower(){
             var flower=document.getElementById("flower");
+            console.log(i);
+
         if(i==1) {
             flower.src = "garden-images/1.svg";
             flower.style.right = "3.3vh";
@@ -22,7 +27,18 @@
         }
             else if(i>=7){
             flower.src="garden-images/flower.svg";
+            document.getElementsByClassName("notice")[0].style.display="block";
+            i=7;
         }
+            else {i=1; Setflower();}
+
+            document.getElementById("waterdate").innerText=i;
+            if(typeof(Cookies.get('username')) !="undefined")
+            {document.getElementById('log').innerHTML=Cookies.get('username');
+                document.getElementById('log').href="account.html";
+            document.getElementById('gardenname').innerHTML="Welcome to "+Cookies.get('username')+"'s garden!";
+            }
+
         }
 
         function waterani() {
@@ -33,11 +49,15 @@
             document.getElementById("waters").style.animationDelay = "2s";
             document.getElementById("flower").style.animation = "flower 0.6s 1";
             document.getElementById("flower").style.animationDelay = "2.7s";
+            document.getElementsByClassName("waternotice")[0].style.animation ="waternotice 2s 1";
+            document.getElementsByClassName("waternotice")[0].style.animationDelay ="2.7s";
+
             document.getElementById("bottle").style.zIndex = "4";
-            setTimeout(stopani,4000);
+            setTimeout(stopani,4700);
      }
         function stopani(){
-            i++;
+            if(i>=1&&i<7)
+            {i++;}
 
             Setflower();
             //展示完成后，删除绑定的动画，以便可以下次触发的时候可以再次显示动画效果
@@ -45,6 +65,7 @@
             document.getElementById("bottle").style.zIndex = "200";
             document.getElementById("waters").style.animation = "none";
             document.getElementById("flower").style.animation = "none";
+            document.getElementsByClassName("waternotice")[0].style.animation ="none";
 
         }
         function hand(h)  //鼠标变手型
@@ -57,7 +78,7 @@
 <body>
 <header>
     <div class="container">
-        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="left"></div>
         <div class="c-main-nav" id="nav1">
 
             <ul class="c-main-nav__list" >
@@ -75,19 +96,28 @@
         </div>
         <div class="middle"><a href="index.html"><img  class="center" src="images/logo.svg" alt=""></a> </div>
         <div class="right">
-            <a href="log.html">Log in</a>
+            <a id="log" href="log.html">Log in</a>
             <img onclick="basketshow()" id="basketbt" src="images/购物车图标.png" alt=""> </div>
         <div id="basket" >
-            <div class="box">
-                <img src="images2/xiuqiuhua.png" alt=""></div>
-            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>
+<!--            <div class="box">-->
+<!--                <img src="images2/xiuqiuhua.png" alt=""></div>-->
+<!--            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>-->
 
             <button><a href="inbasket.html">See Shopping Basket</a></button>
         </div>
     </div>
 </header>
 <div class="garden">
+    <div id="notice" class="notice">
+        <div  class="closenotice" onclick="document.getElementById('notice').style.display='none'"><img src="images/close.svg" alt=""></div>
+        <p>Your rose is in bloom!</p>
+        <p style="font-size: 0.9em; padding-top: 2vh">You will receive a real rose sent by the flover!</p>
+    </div>
+    <div class="waternotice">
+       <img src="images/happyface.svg" alt=""><p> You watered successfully!</p>
+    </div>
 <div class="room">
+    <div class="calendar"><img src="images/日期显示板.svg" alt=""><p>Day <span id="waterdate">1</span></p></div>
     <div class="window"></div>
     <img class="window-bg"  src="garden-images/windowbg.png">
     <img class="dialog-left" src="garden-images/dialog-left.svg" alt="">
@@ -123,8 +153,9 @@
     <path fill="#F7F0DF" d="M100.81,0l577,1.23,87.43,104.25c5.74,6.84-2.34,15-14.86,15H16.74c-12.86,0-20.91-8.56-14.48-15.41Z"/>
     </svg>
 </div>
-<p>Welcome to XX’s Garden!</p>
+<p id="gardenname">Welcome to XX’s Garden!</p>
 </div>
+
     <div class="align-leftcurtain">
         <svg height="100vh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1608 960">
             <g >

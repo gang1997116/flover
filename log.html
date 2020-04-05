@@ -6,29 +6,40 @@
     <link type="text/css" rel="stylesheet" href="css/log-style.css">
     <link type="text/css" rel="stylesheet" href="css/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="js/menucon.js"></script>
+    <script src="js/basket.js" async></script>
 </head>
 <body>
 <header>
     <div class="container">
-        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="left"></div>
         <div class="c-main-nav" id="nav1">
 
             <ul class="c-main-nav__list" >
                 <li class="c-main-nav__item">
-                    <a class="c-main-nav__link " href="index.php">Home</a>
+                    <a class="c-main-nav__link " href="index.html">Home</a>
                 </li>
                 <li class="c-main-nav__item">
                     <a class="c-main-nav__link" href="boxes.html">All Product</a>
                 </li>
                 <li class="c-main-nav__item">
-                    <a class="c-main-nav__link" href="#coins">My Garden</a>
+                    <a class="c-main-nav__link" href="garden.html">My Garden</a>
                 </li>
 
             </ul>
         </div>
-        <div class="middle"><a href="index.php"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
-        <div class="right"></div>
+        <div class="middle"><a href="index.html"><img  class="center" src="images/logo.svg" alt=""></a> </div>
+        <div class="right">
+            <a id="log" href="log.html">Log in</a>
+            <img onclick="basketshow()" id="basketbt" src="images/购物车图标.png" alt=""> </div>
+        <div id="basket" >
+<!--            <div class="box">-->
+<!--                <img src="images2/xiuqiuhua.png" alt=""></div>-->
+<!--            <div class="productinfo" ><p>Hydrangea</p><p>5.99 GBP</p></div>-->
+
+            <button><a href="inbasket.html">See Shopping Basket</a></button>
+        </div>
     </div>
 </header>
 <main>
@@ -38,11 +49,11 @@
     <div class="content">
     <h1>I already have a user account</h1>
     <h4>Please enter your e-mail address and password to identify yourself.</h4>
-    <p>E-mail</p>
-    <input type="text" name="username" placeholder="enter your email address" class="form-username form-control" id="form-username">
+    <p>Username</p>
+    <input type="text" name="username" placeholder="enter your username" class="form-username form-control" id="form-username">
     <p>Password</p>
 	<input type="password" name="password" placeholder="enter your password" class="form-password form-control" id="form-password">
-    <img onclick="document.getElementById('myForm').submit()" src="images/button7.png" class="login" >
+    <img onclick="saveuser();" src="images/button7.png" class="login" >
 
     </div>
 </div>
@@ -61,5 +72,35 @@
 </div>
 </div>
 </main>
+<script type="text/javascript">
+    function saveuser(){
+        username=document.getElementById('form-username').value;
+        Cookies.set('username', username, { expires: 1 }); //Save username
+        password=document.getElementById('form-password').value;
+        Cookies.set('password', password, { expires: 1 }); //Save password
+        window.history.go(-1); //返回上一页
+
+    }
+    function removeuser(){
+        Cookies.remove('username'); //移除用户名
+        Cookies.remove('password'); //移除密码
+        location.reload();
+
+    }
+    window.onload=function setuser(){
+        coo=Cookies.get('username'); // => 'value'
+        if(typeof(coo) != "undefined"){
+            document.getElementById('form-username').value=Cookies.get('username');
+            document.getElementById('form-password').value=Cookies.get('password');
+            document.getElementById('log').innerHTML=Cookies.get('username');
+
+        }
+        // else if(typeof(coo) == "undefined"){
+        //     document.getElementById('form-username').value="username";
+        //     document.getElementById('form-password').value="没有password";
+        // }
+    }
+
+</script>
 </body>
 </html>

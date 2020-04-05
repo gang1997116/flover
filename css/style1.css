@@ -2,34 +2,34 @@
 .no-js .cube {
 	border: 0.75vw solid #fff;
 	outline: 1px solid #fff;
-	background: #f0f0f0 url(../img/xiuqiuhua.png) no-repeat center center;
+	background: #f0f0f0 url(../img/01.png) no-repeat center center;
 	background-size: cover;
 }
 
 .cube:not(.cube--inactive):nth-child(2n) .cube__side,
 .no-js .cube:not(.cube--inactive):nth-child(2n) {
-	background-image: url(../img/taiyanghua.png);
+	background-image: url(../img/02.png);
 	background-size: cover;
 }
 
 .cube:not(.cube--inactive):nth-child(3n) .cube__side,
 .no-js .cube:not(.cube--inactive):nth-child(3n) {
-	background-image: url(../img/baihe.png);
+	background-image: url(../img/03.png);
 	background-size: cover;
 }
 .cube:not(.cube--inactive):nth-child(4n) .cube__side,
 .no-js .cube:not(.cube--inactive):nth-child(4n) {
-	background-image: url(../img/meigui.png);
+	background-image: url(../img/04.png);
 	background-size: cover;
 }
 .cube:not(.cube--inactive):nth-child(5n) .cube__side,
 .no-js .cube:not(.cube--inactive):nth-child(5n) {
-	background-image: url(../img/yujinxiang.png);
+	background-image: url(../img/05.png);
 	background-size: cover;
 }
 .cube:not(.cube--inactive):nth-child(6n) .cube__side,
 .no-js .cube:not(.cube--inactive):nth-child(6n) {
-	background-image: url(../img/moli.png);
+	background-image: url(../img/06.png);
 	background-size: cover;
 }
 .cube--inactive .cube__side,

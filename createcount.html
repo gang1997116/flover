@@ -11,24 +11,30 @@
 <body>
 <header>
     <div class="container">
-        <div class="left"><img onclick="doHide()" id="menu" src="images/菜单标.png" alt=""></div>
+        <div class="left"></div>
         <div class="c-main-nav" id="nav1">
 
             <ul class="c-main-nav__list" >
                 <li class="c-main-nav__item">
-                    <a class="c-main-nav__link " href="index.php">Home</a>
+                    <a class="c-main-nav__link " href="index.html">Home</a>
                 </li>
                 <li class="c-main-nav__item">
                     <a class="c-main-nav__link" href="boxes.html">All Product</a>
                 </li>
                 <li class="c-main-nav__item">
-                    <a class="c-main-nav__link" href="#coins">My Garden</a>
+                    <a class="c-main-nav__link" href="garden.html">My Garden</a>
                 </li>
 
             </ul>
         </div>
-        <div class="middle"><a href="index.php"><img  class="center" src="images/资源%2057.png" alt=""></a> </div>
-        <div class="right" style="padding-left: 2.2em"><a href="log.html">Log in</a>
+        <div class="middle"><a href="index.html"><img  class="center" src="images/logo.svg" alt=""></a> </div>
+        <div class="right">
+            <a href="log.html">Log in</a>
+            <img onclick="basketshow()" id="basketbt" src="images/购物车图标.png" alt=""> </div>
+        <div id="basket" >
+
+
+            <button><a href="inbasket.html">See Shopping Basket</a></button>
         </div>
     </div>
 </header>
