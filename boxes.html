@@ -32,6 +32,12 @@
 
 				}
 			})
+			function removeuser(){
+				Cookies.remove('username'); //移除用户名
+				Cookies.remove('password'); //移除密码
+				location.reload();
+				//window.history.go(-1); //返回上一页
+			}
    </script>
 	</head>
 	<body>
@@ -58,6 +64,8 @@
 			</div>
 			<div class="middle"><a href="index.html"><img  class="center" src="images/logo.svg" alt=""></a> </div>
 			<div class="right">
+				<a id="logout" class="logout" onclick="removeuser()">Log out</a>
+				<img onclick="basketshow()" class="line" src="images/xian.svg" alt="">
                 <a id="log" href="log.html">Log in</a>
 				<img onclick="basketshow()" id="basketbt" src="images/购物车图标.png" alt=""> </div>
 			<div id="basket" >
