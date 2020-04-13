@@ -73,7 +73,7 @@ function addItemToCart(title, price, imageSrc) {
         <div class="box">
             <img src="${imageSrc}" alt=""></div>
             <div class="productinfo"><p class="cart-item-title">${title}</p>
-            <p class="cart-price">${price}</p></div>`
+            <p class="cart-price">${price} GBP</p></div>`
 
     cartRow.innerHTML = cartRowContents;
     cartItems.append(cartRow);
